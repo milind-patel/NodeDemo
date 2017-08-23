@@ -4,14 +4,7 @@ Installation, and tutorial here : http://teknosains.com/i/restful-crud-example-w
 
 Live DEMO: http://teknosains.com/i/simple-crud-nodejs-mysql
 
-## Installation
-*for newbies : Clone or download zip to your machine then hit this :
-
-    cd rest-crud
-
-then
-
-    npm install
+npm nstall
 
 ## Configuration (database)
 server.js
@@ -20,7 +13,7 @@ server.js
         user: 'root',
         password : 'root',
         port : 3306, //port mysql
-        database:'test'	
+        database:'nodedemo'	
 
 
 	
