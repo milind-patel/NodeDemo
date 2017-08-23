@@ -23,9 +23,9 @@ app.use(
     connection(mysql,{
         host     : 'localhost',
         user     : 'root',
-        password : '',
-        database : 'test',
-        debug    : false //set true if you wanna see debug logger
+        password : 'root',
+        database : 'node_demo',
+        debug    : true //set true if you wanna see debug logger
     },'request')
 
 );
@@ -53,7 +53,7 @@ router.use(function(req, res, next) {
 
 var curut = router.route('/user');
 
-
+//console.log(curut);
 //show the CRUD interface | GET
 curut.get(function(req,res,next){
 

@@ -44,7 +44,7 @@
 </div>
 <div class="page-data">
     
-    <form method="post" action="" id="the-form">
+    <form method="get" action="" id="the-form">
         <table cellpadding="11">
         <tr>
             <td class="label">Name</td><td>: <input type="text" name="name"></td>
@@ -71,7 +71,7 @@
 <script>
 
     function saveUser(){
-       
+       console.log($("#the-form").serialize());
        $.ajax({
         
         url:"/api/user",
@@ -84,7 +84,7 @@
         },
         error:function(xhr, status, error){
             
-            console.log(xhr.responseText);
+            //console.log(xhr.responseText);
             var err = '';
             $.each(JSON.parse(xhr.responseText) , function(i, item) {
                
@@ -109,7 +109,7 @@
             },
             error:function(xhr, status, error){
             
-                console.log(xhr.responseText);
+                //console.log(xhr.responseText);
                 alert("Error deleting");
                 return false;
             }
